@@ -96,8 +96,6 @@ here. That exercise needed the 3-broker Docker setup.
 ## 7. Shut down
 Ctrl+C in the PowerShell window running `kafka-server-start.bat`.
 
----
-
 ## Quick reference:
 
 | Interview topic                          | Exercise |
