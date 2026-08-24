@@ -75,6 +75,7 @@ Run `OrderConsumer` with `balance-service manual`. Kill it (Ctrl+C) right after
 message gets reprocessed (duplicate), caught by the idempotency check. Then try
 `balance-service auto` to see the background-commit (data-loss-risk) version.
 
+### Exercise D — `acks` trade-off
 Run `OrderProducer` with args `0`, `1`, and `all` — compare behavior.
 ```
 mvn exec:java -Dexec.mainClass="com.kafkaProject.kafka.OrderProducer" -Dexec.args="0"
@@ -92,20 +93,12 @@ This single-broker setup uses **replication factor 1** — there's nothing to
 replicate to, so you can't physically kill a leader and watch failover happen
 here. That exercise needed the 3-broker Docker setup.
 
-That's fine for interview prep: this is genuinely the more common way people
-first learn Kafka locally, and you can still describe leader/follower/ISR/
-failover fluently from the explanation + diagram walkthrough we did earlier —
-interviewers are testing whether you understand the *mechanism*, not whether
-you've personally triggered a failover on your laptop. If you want to see it
-live later, the Docker Compose version (3 brokers) is worth revisiting once
-Docker Desktop is set up — but it's not blocking your prep now.
-
 ## 7. Shut down
 Ctrl+C in the PowerShell window running `kafka-server-start.bat`.
 
 ---
 
-## Quick reference: which exercise proves which interview answer
+## Quick reference:
 
 | Interview topic                          | Exercise |
 |-------------------------------------------|----------|
