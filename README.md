@@ -13,8 +13,6 @@ actually happen, using a plain local Kafka install
 - Replication / leader-follower — explained conceptually here (single broker
   can't run RF=3, see note below)
 
----
-
 ## 1. Prerequisites
 - Java 17+ (`java -version` to check)
 - Maven (or use IntelliJ's bundled Maven)
