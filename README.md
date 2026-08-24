@@ -1,7 +1,7 @@
-# Kafka Interview Demo — Runnable IntelliJ Project (No Docker)
+# Kafka — Runnable IntelliJ Project
 
 A small Maven project that lets you *see* every Kafka concept from your prep notes
-actually happen, using a plain local Kafka install — no Docker required.
+actually happen, using a plain local Kafka install
 
 ## Covers
 - Topics, partitions, keyed partitioning
@@ -75,7 +75,6 @@ Run `OrderConsumer` with `balance-service manual`. Kill it (Ctrl+C) right after
 message gets reprocessed (duplicate), caught by the idempotency check. Then try
 `balance-service auto` to see the background-commit (data-loss-risk) version.
 
-### Exercise D — `acks` trade-off
 Run `OrderProducer` with args `0`, `1`, and `all` — compare behavior.
 ```
 mvn exec:java -Dexec.mainClass="com.kafkaProject.kafka.OrderProducer" -Dexec.args="0"
