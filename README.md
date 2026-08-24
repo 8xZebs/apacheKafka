@@ -1,7 +1,7 @@
-# Kafka Interview Demo — Runnable IntelliJ Project (No Docker)
+# Kafka — Runnable IntelliJ Project
 
 A small Maven project that lets you *see* every Kafka concept from your prep notes
-actually happen, using a plain local Kafka install — no Docker required.
+actually happen, using a plain local Kafka install
 
 ## Covers
 - Topics, partitions, keyed partitioning
@@ -93,20 +93,12 @@ This single-broker setup uses **replication factor 1** — there's nothing to
 replicate to, so you can't physically kill a leader and watch failover happen
 here. That exercise needed the 3-broker Docker setup.
 
-That's fine for interview prep: this is genuinely the more common way people
-first learn Kafka locally, and you can still describe leader/follower/ISR/
-failover fluently from the explanation + diagram walkthrough we did earlier —
-interviewers are testing whether you understand the *mechanism*, not whether
-you've personally triggered a failover on your laptop. If you want to see it
-live later, the Docker Compose version (3 brokers) is worth revisiting once
-Docker Desktop is set up — but it's not blocking your prep now.
-
 ## 7. Shut down
 Ctrl+C in the PowerShell window running `kafka-server-start.bat`.
 
 ---
 
-## Quick reference: which exercise proves which interview answer
+## Quick reference:
 
 | Interview topic                          | Exercise |
 |-------------------------------------------|----------|
